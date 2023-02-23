@@ -1,0 +1,19 @@
+##wap to input list elements.modify it in such a way that it doesnot
+#contain any duplicate elements.that is all elements occuring  multiple times
+#should appear only once
+
+lst=eval(input("Enter list elements : "))
+
+lst.sort()
+length=len(lst)
+i=0
+while(i<length-1):
+    if lst[i]==lst[i+1]:
+        lst.pop(i)
+        length-=1
+    else:
+
+        i+=1
+
+print(lst)
+
