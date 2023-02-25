@@ -1,0 +1,31 @@
+##wap to read 2 lists numerator and denominator which contains
+#the numerator and denominators of same fractions
+#at the respectiv indexes then display the smallest fraction
+#along with its index
+
+num_fraction_pairs=int(input("Enter number of fraction pair "))         #to find the total number of fractions
+
+decimal_of_fraction=0
+fraction_list1=[]
+smallest_ele=0
+fraction_list2=0
+
+
+
+for i in range(num_fraction_pairs):                       #loop to recieve equal number of numerator and denominator
+    n=eval(input("Enter list of numerators : "))
+    d=eval(input("Enter list of denominators : "))
+    decimal_of_fraction=n/d
+    fraction_list1.append(decimal_of_fraction)            #appending each calculated fraction at every loop to a list 
+
+fraction_list2=sorted(fraction_list1)               #sorting list to find the least fraction
+
+smallest_ele=fraction_list1[0]                    #found first element as least fraction
+print("smallest element : ",smallest_ele)
+for j in range(num_fraction_pairs):
+    if fraction_list1[i]==smallest_ele:
+        print("smallest fraction : ",smallest_ele," found at index : ",j)
+        
+    
+
+
