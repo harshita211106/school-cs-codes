@@ -1,0 +1,16 @@
+#wap to input a integer list ,stop value, start value, step value of a list slice and find the minimum and maximum integer between them
+
+lst=eval(input("Enter list elements : "))                                               #input integer list
+
+print("length of list : ",len(lst))                                         #printing length of list
+
+start=int(input("Enter the start value of the slicing : "))               #START VALUE
+stop=int(input("Enter the stop value of the slicing : "))                  #STOP VALUE
+step=int(input("Enter the step value of the slicing : "))                  #STEP VALUE
+
+print('slicing entered :- [',start,':',stop,':',step,']')                                         #repesenting list slicing for better understanding
+
+lst=lst[start:stop:step]                                                      #ASSIGNNG SLICING VARIBLES IN SLICE FORMAT (SYNTAX)
+
+print(max(lst),'is the maximum value between the entered index range and list')         #printing maximum integer
+print(min(lst),'is the minimum value between the entered index range and list')         #printing minimum integer
