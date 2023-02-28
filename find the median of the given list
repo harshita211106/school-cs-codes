@@ -1,0 +1,18 @@
+##wap to cal the median of the given even or odd number of elements in a list
+
+lst=eval(input("Enter list elements "))
+lst1=sorted(lst)                                  #list in ascending order
+length=len(lst1)
+ 
+middle_odd,middle_even1,middle_even2=0,0,0
+if length%2==0:                                           #if list has eeven number of elements
+     
+    middle_even1,middle_even2=(length//2)-1,(length//2)
+    average=(lst1[middle_even1]+lst1[middle_even2])/2             #CALCULATING MEDIAN OF EVEN NUMBER OF ELEMENTS BY TAKING AVERAGE OF 2 MIDDLE ELEMENTS
+    print(average)
+    
+    
+else:
+    middle_odd=(length/2)+0.5-1                                   #SUBSTRACTING 1 TO MATCH WITH THE INDEX VALUE IN THE SORTED LIST
+    middle_odd=int(middle_odd)
+    print(lst1[middle_odd])
