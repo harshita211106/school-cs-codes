@@ -1,0 +1,10 @@
+##wap to remove/pop out the first initial of every string inside a string list
+
+lst=eval(input("Enter string list : "))
+
+length=len(lst)
+for i in range (length):
+    
+    lst[i]=lst[i][1:]                   #using string and list slicing for the purpose
+        
+print(lst)
