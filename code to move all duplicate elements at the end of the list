@@ -1,0 +1,27 @@
+##wap to move all the duplicate elements of a list to the end of the list
+
+lst=eval(input("Enter list elements : "))
+
+lst.sort()
+print(lst)              #printing sorted list
+
+length=len(lst)
+
+
+i=0               #DEFINING VALUE OF i SINCE ITS A WHILE LOOP AHEAD
+
+               
+
+while(i<length-1):
+    if lst[i]==lst[i+1]:                      #checking if 2 duplicate pairs is present or not
+        
+        lst.append(lst[i])                      #appending duplicate element to the end
+        lst.pop(lst[i])                         #REMOVING DUPLICATE ELEMENTS FROM THE LIST TO MAINTAIN LIST RANGING
+        
+        
+        length-=1                         #REDUCING LENGTH OF LIST BY 1 BECAUSE POP METHOD ELIMINATED AN ELEMENT FROM THE LIST (BASICALLY TO PREVENT OT OF RANGING)
+    else:
+
+        i+=1                #if duplicate pair in not found,value of i must be increased
+
+print(lst)
